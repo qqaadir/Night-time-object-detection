@@ -2,10 +2,7 @@
 
 @author: AliQadar
 """
-
-#Extracting and Saving Video Frames
-
-
+#Simple script to extract and save video frames
 import cv2
 import numpy as np
 import imageio as io
