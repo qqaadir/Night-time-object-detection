@@ -1,0 +1,10 @@
+item {
+  name: "add your item"
+  id: 1
+  display_name: "item your item string id"
+}
+item {
+  name: "add your item"
+  id: 2
+  display_name: "item your item string id"
+}
