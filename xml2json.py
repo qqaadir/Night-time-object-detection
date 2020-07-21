@@ -9,7 +9,7 @@ import xmltodict
 import os 
 import json
 
-path = r"your_images_path_here"
+path = r"F:/auto_annotate-file_name/auto_annotate-file_name/dummy"
 
 
 class Decoder(json.JSONDecoder):
@@ -44,7 +44,7 @@ for filename in os.listdir(path):
     jsonString=jsonString.replace("annotation", "outputs")
     
     jsonString=jsonString.replace("filename", "path")
-    
+    jsonString=jsonString.replace("traffic sign", "traffic_sign")
 
     with open(fullname[:-4] + ".json", 'w',encoding='utf-8') as f:
         D= json.loads(jsonString, cls=Decoder)
