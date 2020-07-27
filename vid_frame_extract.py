@@ -11,10 +11,10 @@ import os
 from glob import glob
 import math
 
-ORIGINAL_DIR = 'F:/Night-time_data/Group33/'
-OUTPUT_IMG_DIR = 'F:/Night-time_data/Group33/images3/'
-folders=os.listdir(ORIGINAL_DIR)
-len_folders = len(folders)
+ORIGINAL_DIR = "F:/Night-time_data/Datasets/Victoria/Sydney/"
+OUTPUT_IMG_DIR = "F:/Night-time_data/Datasets/Victoria/Sydney_imgs/"
+files=glob(ORIGINAL_DIR + "*.mp4")
+len_files = len(files)
 #%%    
 def extract_frames(videoFile, dest, fname):
 
@@ -30,17 +30,15 @@ def extract_frames(videoFile, dest, fname):
             break
         if (frameId % math.floor(frameRate) == 0):
             filename = dest + fname + '_' +  str(int(frameId)) + ".jpg"
+          
             cv2.imwrite(filename, frame)
             print(" Frame written:", ret)
     cap.release()
-    print ("Done!")
+    print ("Done images for video !")
 
 #%%
-for i in range(len_folders-1):
-    vid_paths = os.path.join(ORIGINAL_DIR + folders[i], '*.MP4')
-    vid_files = glob(vid_paths)
-    for j in range(len(vid_files)):
-        filename = vid_files[j][-22:-4]
-        extract_frames(vid_files[j], OUTPUT_IMG_DIR, filename)
-    
+for i in range(len_files-1):
+    for j in range(len_files):
+        filename = files[j].split("\\")[1].split('.mp4')[0]
+        extract_frames(files[j], OUTPUT_IMG_DIR, filename)
     
