@@ -9,7 +9,7 @@ import xmltodict
 import os 
 import json
 
-path = r"F:/auto_annotate-file_name/auto_annotate-file_name/dummy"
+path = r"Path-to-images"
 
 
 class Decoder(json.JSONDecoder):

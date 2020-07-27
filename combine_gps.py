@@ -1,8 +1,8 @@
 import glob
 
-file_path1=r"F:/Night-time_data/Snow_20200420/group1/"
-file_path2=r"F:/Night-time_data/Snow_20200420/group2/"
-file_path3=r"F:/Night-time_data/Snow_20200420/group3/"
+file_path1=r"Path-to-files-here"
+file_path2=r"Path-to-files-here"
+file_path3=r"Path-to-files-here"
 paths={file_path1, file_path2, file_path3}  # input file paths
 
 output_files = ["g_result01.NMEA", "g_result02.NMEA", "g_result03.NMEA"] # output file names

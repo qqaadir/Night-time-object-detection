@@ -12,8 +12,7 @@ from sklearn.model_selection import train_test_split
 # do test train splitting
 #%%
 # find image names
-dataset_path = r"F:/Night-time_data/Snow_20200420/images1/g1_snow/*.jpg"
-# dataset_path = r"F:/Night-time_data/Object_detection_nighttime/dataset/*.jpg" 
+dataset_path = r"Path to images/*.jpg"
 image_files = glob(dataset_path)
 # image_files = [str(pp) for pp in dataset_path.glob("**/*.jpg")]
 # remove file extension
@@ -31,8 +30,8 @@ def batch_move_files(file_list, destination_path):
     return
 
 #%%
-test_dir = r"F:/Night-time_data/Object_detection_nighttime/test_images_snow"
-train_dir = r"F:/Night-time_data/Object_detection_nighttime/training_images_snow"
+test_dir = r"test_images_directory_path_here"
+train_dir = r"train_images_directory_path_here"
 batch_move_files(train_names,  train_dir)
 batch_move_files(test_names,  test_dir)
 
