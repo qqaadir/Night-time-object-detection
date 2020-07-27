@@ -11,8 +11,8 @@ import os
 from glob import glob
 import math
 
-ORIGINAL_DIR = "F:/Night-time_data/Datasets/Victoria/Sydney/"
-OUTPUT_IMG_DIR = "F:/Night-time_data/Datasets/Victoria/Sydney_imgs/"
+ORIGINAL_DIR = "Path-to-videos-goes-here"
+OUTPUT_IMG_DIR = "Path-to-output-images-goes-here"
 files=glob(ORIGINAL_DIR + "*.mp4")
 len_files = len(files)
 #%%    
