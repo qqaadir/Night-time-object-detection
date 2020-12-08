@@ -21,7 +21,7 @@ def resize_imgs(img_dir, extension, size):
         print('Image written : ' + img.split("\\")[1])
 
 
-img_dir = "Path-to-images-directory"
+img_dir = r"path-to-images/"
 extension = "jpg"
 size = (1920, 1080)
 resize_imgs(img_dir, extension, size)

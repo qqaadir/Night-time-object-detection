@@ -29,9 +29,13 @@ def batch_move_files(file_list, destination_path):
           shutil.copy2(xml, destination_path)
     return
 
-#%%
-test_dir = r"test_images_directory_path_here"
-train_dir = r"train_images_directory_path_here"
+#%% Check for directory exists
+test_dir = r"path-to-test-folder/test"
+train_dir = r"path-to-train-folder/train"
+if not (os.path.exists(test_dir) or os.path.exists(train_dir) ):
+    os.mkdir(test_dir)
+    os.mkdir(train_dir)
+#%% Move file pairs to test and train folders
 batch_move_files(train_names,  train_dir)
 batch_move_files(test_names,  test_dir)
 
